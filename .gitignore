@@ -35,8 +35,3 @@ dist/
 # Python packaging files
 *.egg
 *.wheel
-
-# Generated analysis files
-*.csv
-*.xlsx
-*.png
