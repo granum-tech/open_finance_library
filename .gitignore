@@ -1,0 +1,42 @@
+# Ignore virtual environment folders
+venv/
+.env/
+.virtualenv/
+
+# Byte-compiled files
+*.pyc
+*.pyo
+__pycache__/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Environment variables and secrets
+.env
+*.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Python packaging files
+*.egg
+*.wheel
+
+# Generated analysis files
+*.csv
+*.xlsx
+*.png
