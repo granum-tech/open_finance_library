@@ -9,18 +9,10 @@ Created by [Granum Technologies LLC](https://www.granum-tech.com/)
 <table>
   <tr>
     <td>
-      <img src="https://github.com/granum-tech/open_finance_library/blob/main/vintage_analysis/examples/output/percent/yearly/vintage_analysis_yearly_percent.png?raw=true" width="400" alt="Monthly Percent"/>
+      <img src="https://github.com/granum-tech/open_finance_library/blob/main/vintage_analysis/examples/output/sum/quarterly/vintage_analysis_quarterly_sum.png?raw=true" width="300" alt="Quarterly Percent"/>
     </td>
     <td>
-      <img src="https://github.com/granum-tech/open_finance_library/blob/main/vintage_analysis/examples/output/sum/quarterly/vintage_analysis_quarterly_sum.png?raw=true" width="400" alt="Quarterly Percent"/>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://github.com/granum-tech/open_finance_library/blob/main/vintage_analysis/examples/other/matrix_example_01.jpg?raw=true" width="400" alt="Yearly Percent"/>
-    </td>
-    <td>
-      <img src="https://github.com/granum-tech/open_finance_library/blob/main/vintage_analysis/examples/other/matrix_example_02.jpg?raw=true" width="400" alt="Monthly Sum"/>
+      <img src="https://github.com/granum-tech/open_finance_library/blob/main/vintage_analysis/examples/other/matrix_example_02.jpg?raw=true" width="700" alt="Quarterly Percent"/>
     </td>
   </tr>
 </table>
