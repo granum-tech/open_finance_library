@@ -4,7 +4,7 @@ The **open finance library** is a collection of open-source financial modeling a
 
 ## Current Analyses & Models
 
-### **Vintage Analysis**
+### [**Vintage Analysis**](https://github.com/granum-tech/open_finance_library/tree/main/vintage_analysis)
 <a href="https://colab.research.google.com/github/granum-tech/open_finance_library/blob/main/vintage_analysis/src/vintage_analysis.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>  
 A tool to evaluate loan performance over time by categorizing loans into "vintages" based on their origination dates. This analysis produces a cumulative net charge-off matrix and a visualization to track loan quality degradation across cohorts.
 
@@ -16,8 +16,8 @@ A tool to evaluate loan performance over time by categorizing loans into "vintag
 </table>  
 
 - **Links**
-    - **Vintage Analysis GitHub Repository**: [vintage_analysis folder](https://github.com/granum-tech/open_finance_library/tree/main/vintage_analysis)
-    - **Vintage Analysis Colab Notebook**: [Open in Google Colab](https://colab.research.google.com/github/granum-tech/open_finance_library/blob/main/vintage_analysis/src/vintage_analysis.ipynb)
+    - [**Vintage Analysis GitHub Repository**](https://github.com/granum-tech/open_finance_library/tree/main/vintage_analysis)
+    - [**Vintage Analysis Colab Notebook**](https://colab.research.google.com/github/granum-tech/open_finance_library/blob/main/vintage_analysis/src/vintage_analysis.ipynb)
 
 - **Repository Structure**
     - `vintage_analysis/`
