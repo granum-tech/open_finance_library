@@ -114,23 +114,23 @@ Ensure that column names and data formats match these requirements.
 ## **Function Descriptions**
 
 <a name="load-data"></a>
-1. **`load_data(file_path)`**  
+### **`load_data(file_path)`**  
 Loads the uploaded file into a pandas DataFrame. It supports both CSV and Excel formats.
 
 <a name="validate-data"></a>
-2. **`validate_data(df, calculation_type, period_type)`**
+### **`validate_data(df, calculation_type, period_type)`**  
 Validates the input data and variables:
 - Checks for required columns
 - Ensures valid date formats
 - Ensures valid `calculation_type` and `period_type` input variable values
 
 <a name="calculate-vintage-matrix"></a>
-3. **`calculate_vintage_matrix(df, period_type, calculation_type, output_file_path)`**  
+### **`calculate_vintage_matrix(df, period_type, calculation_type, output_file_path)`**  
 Performs the vintage analysis:
 - Groups loans into vintages
 - Calculates cumulative net call-off or call-off percentage of vintages origination sum
 - Saves the results to an Excel file
 
 <a name="plot-vintage-matrix"></a>
-4. **`plot_vintage_matrix(vintage_matrix, period_type, calculation_type, output_file_path)`**
+### **`plot_vintage_matrix(vintage_matrix, period_type, calculation_type, output_file_path)`**
 Generates a line graph showing the cumulative call-offs over time for each vintage and saves it as an image.
