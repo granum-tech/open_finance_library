@@ -45,7 +45,8 @@ For further details, an in-depth guide, and example input and output files pleas
 1. **Change the Variables**  
    Update the variables at the top of the notebook to match your preferences. For example:
    ```python
-   period_type = 'yearly'
+   vintage_period_type = 'quarterly'
+   aging_period_type = 'monthly'
    calculation_type = 'percent'
    output_file_path = None
 2. **Upload Your File**  
@@ -54,9 +55,8 @@ For further details, an in-depth guide, and example input and output files pleas
 3. **Run All**  
    Click "Runtime" then "Run all" or use the hotkey "Ctrl+F9" to execute all cells in the notebook once variables have been set. Ensure you upload your file and then note outputs including possible data quality errors. Your output matrix .xlsx file and graph .png file will be in the default directory.
 4. **Output**  
-   - **Excel File:** A detailed analysis saved to the specified file path or defaulting i.e. `vintage_analysis_quarterly_percent.xlsxs`
-   - **Graph:** A PNG image visualizing the results i.e. `vintage_analysis_quarterly_percent.png`  
-
+   - **Excel File:** A detailed analysis saved to the specified file path or defaulting i.e. `vintage_analysis_v_{vintage_period_type}_a_{aging_period_type}_{calculation_type}.xlsxs`
+   - **Graph:** A PNG image visualizing the results i.e. `vintage_analysis_v_{vintage_period_type}_a_{aging_period_type}_{calculation_type}.png`  
    Example outputs can be found in the [GitHub Repository](https://github.com/granum-tech/open_finance_library/tree/main/vintage_analysis/examples/output).
 5. **Diagnostics**  
    After the last code block at the bottom of the notebook you will see outputs of the functions including `validate_data` which will print any errors that it is looking for. This is a good way to troubleshoot. You can also review the [GitHub Repository](https://github.com/granum-tech/open_finance_library/tree/main/vintage_analysis) or reach out to the author at info@granum-tech.com.
@@ -66,13 +66,17 @@ For further details, an in-depth guide, and example input and output files pleas
 
 Below you can set the following variables:
 
-- **`period_type`**: The time period for analysis:
-  - `'monthly'`: Group loans into monthly vintages.
-  - `'quarterly'`: Group loans into quarterly vintages.
-  - `'yearly'`: Group loans into yearly vintages.
+- **`vintage_period_type`**: Period in which loans are grouped (columns):
+  - `'monthly'`
+  - `'quarterly'`: Default value if none given.
+  - `'yearly'`
+- **`aging_period_type`**: Period in which aging is measured (rows):
+  - `'monthly'`: Default value if none given.
+  - `'quarterly'`
+  - `'yearly'`
 - **`calculation_type`**: The type of calculation for the analysis:
   - `'sum'`: Calculate the cumulative net call-off sum.
-  - `'percent'`: Calculate the percentage of cumulative charge-offs relative to the original amount financed.
+  - `'percent'`: Calculate the percentage of cumulative charge-offs relative to the original amount financed. Default value if none given.
 - **`output_file_path`**: The file path for saving the analysis results. Leave it as `None` to use the default naming.
 
 <a name="input-requirements"></a>
@@ -118,14 +122,14 @@ Ensure that column names and data formats match these requirements.
 Loads the uploaded file into a pandas DataFrame. It supports both CSV and Excel formats.
 
 <a name="validate-data"></a>
-### **`validate_data(df, calculation_type, period_type)`**  
+### **`validate_data(df, calculation_type, vintage_period_type, aging_period_type)`**  
 Validates the input data and variables:
 - Checks for required columns
 - Ensures valid date formats
-- Ensures valid `calculation_type` and `period_type` input variable values
+- Ensures valid `calculation_type`, `vintage_period_type`, and `aging_period_type` input variable values
 
 <a name="calculate-vintage-matrix"></a>
-### **`calculate_vintage_matrix(df, period_type, calculation_type, output_file_path)`**  
+### **`calculate_vintage_matrix(df, vintage_period_type='quarterly', aging_period_type='monthly', calculation_type='percent', output_file_path)`**  
 Performs the vintage analysis:
 - Groups loans into vintages
 - Calculates cumulative net call-off or call-off percentage of vintages origination sum
