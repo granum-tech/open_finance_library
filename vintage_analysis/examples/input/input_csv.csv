@@ -1,4 +1,4 @@
-loan_id,boarding_date,charge_off_date,net_call_off,original_amount_financed
+loan_id,boarding_date,charge_off_date,charge_off,original_amount_financed
 1,12/11/2015,,,122072
 2,12/11/2015,,,60289
 3,12/11/2015,,,33935

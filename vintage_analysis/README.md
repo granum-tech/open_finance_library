@@ -75,7 +75,7 @@ Below you can set the following variables:
   - `'quarterly'`
   - `'yearly'`
 - **`calculation_type`**: The type of calculation for the analysis:
-  - `'sum'`: Calculate the cumulative net call-off sum.
+  - `'sum'`: Calculate the cumulative charge-off sum.
   - `'percent'`: Calculate the percentage of cumulative charge-offs relative to the original amount financed. Default value if none given.
 - **`output_file_path`**: The file path for saving the analysis results. Leave it as `None` to use the default naming.
 
@@ -87,7 +87,7 @@ Below you can set the following variables:
 
 Your input file should have the following format:
 
-| loan_id | boarding_date | charge_off_date | net_call_off | original_amount_financed |
+| loan_id | boarding_date | charge_off_date | charge_off | original_amount_financed |
 |---------|---------------|-----------------|--------------|--------------------------|
 | 1       | 12/11/2015    |                 |              | 122072.00               |
 | 2       | 2/9/2016      |                 |              | 50595.00                |
@@ -97,7 +97,7 @@ Your input file should have the following format:
 Alternatively, your file can be in CSV format like below:
 
 ```
-loan_id,boarding_date,charge_off_date,net_call_off,original_amount_financed  
+loan_id,boarding_date,charge_off_date,charge_off,original_amount_financed  
 1,12/11/2015,,,122072  
 2,2/9/2016,,,50595  
 3,2/10/2016,,,38905
@@ -109,7 +109,7 @@ loan_id,boarding_date,charge_off_date,net_call_off,original_amount_financed
 - **loan_id**: A unique identifier for each loan (e.g., 1, 2, 3).
 - **boarding_date**: The date the loan was issued (format: MM/DD/YYYY).
 - **charge_off_date**: The date the loan was written off, if applicable.
-- **net_call_off**: The amount charged off for the loan (optional, defaults to 0 if not provided).
+- **charge_off**: The amount charged off for the loan (optional, defaults to 0 if not provided).
 - **original_amount_financed**: The total amount financed when the loan was issued.
 
 Ensure that column names and data formats match these requirements.
@@ -132,9 +132,9 @@ Validates the input data and variables:
 ### **`calculate_vintage_matrix(df, vintage_period_type='quarterly', aging_period_type='monthly', calculation_type='percent', output_file_path)`**  
 Performs the vintage analysis:
 - Groups loans into vintages
-- Calculates cumulative net call-off or call-off percentage of vintages origination sum
+- Calculates cumulative charge-off or charge-off percentage of vintages origination sum
 - Saves the results to an Excel file
 
 <a name="plot-vintage-matrix"></a>
 ### **`plot_vintage_matrix(vintage_matrix, period_type, calculation_type, output_file_path)`**
-Generates a line graph showing the cumulative call-offs over time for each vintage and saves it as an image.
+Generates a line graph showing the cumulative charge-offs over time for each vintage and saves it as an image.
